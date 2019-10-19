@@ -45,8 +45,8 @@ public class FileNameChanger {
     }
     public static void main(String[] args) {
         JFileChooser rc = new JFileChooser();
-        rc.setCurrentDirectory(new java.io.File("C:"));
-        rc.setDialogTitle("Select Video Folder");
+        rc.setCurrentDirectory(new java.io.File("user.home"));
+        rc.setDialogTitle("Select File Folder");
         rc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         rc.showOpenDialog(null);
         File[] files = new File(rc.getSelectedFile().getAbsolutePath()).listFiles();
