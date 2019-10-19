@@ -19,10 +19,9 @@ public class FileNameChanger {
                 inBracket = true;
             }else if(fileName.charAt(i)== ']' && inBracket == true){
                 inBracket = false;
-                i++;
             }
             
-            if(!inBracket)
+            if(!(fileName.charAt(i)== ']') && !inBracket)
                 newfileName = newfileName + fileName.charAt(i);
         }
         return newfileName;
